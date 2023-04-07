@@ -4,16 +4,17 @@
 
 
 //vou usar o nome função js no lugar de redline
-const funcaoJs = require('readline').createInterface({
-    input : process.stdin,
-    output : process.stdout
+const lerLinha = require('readline').createInterface({
+    input : process.stdin, //entrada de dados
+    output : process.stdout //saida de dados
 });
 //require => requisita a função redline do js
 //createInterface = > cria uma interface para interação com o usuario
 
-let nome;
+let nome; //variavel vazia
 
-funcaoJs.question('Qual é o seu nome: ',input => {
+lerLinha.question('Qual é o seu nome: ',input => {
     nome = input;
     console.log('bem vindo ' ,nome);
+    lerLinha.close();//encerra o programa
 });
